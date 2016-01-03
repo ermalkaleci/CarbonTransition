@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -35,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucp-DO-anS">
-                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <rect key="frame" x="254" y="502" width="50" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EYc-ZQ-qUv"/>
@@ -51,20 +52,43 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="tV2-MX-vh4" kind="presentation" id="X8o-a1-gf9"/>
+                                    <segue destination="tV2-MX-vh4" kind="presentation" identifier="redColor" id="X8o-a1-gf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYE-mA-4Qr">
+                                <rect key="frame" x="135" y="259" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.28627450980392155" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EtH-bC-q7M"/>
+                                    <constraint firstAttribute="height" constant="50" id="GGY-HX-IPK"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="plus">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="tV2-MX-vh4" kind="presentation" identifier="asphaltColor" id="0hd-1i-Mom"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ucp-DO-anS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jwi-U1-iIP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ucp-DO-anS" secondAttribute="bottom" constant="20" id="u6w-uu-hYr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ucp-DO-anS" secondAttribute="trailing" id="XVt-rC-iqY"/>
+                            <constraint firstItem="bYE-mA-4Qr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWK-H0-UPE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ucp-DO-anS" secondAttribute="bottom" constant="16" id="u6w-uu-hYr"/>
+                            <constraint firstItem="bYE-mA-4Qr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vsk-xi-rKi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="CarbonMaterialTransition" id="FxP-2X-rsm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="plusButton" destination="Ucp-DO-anS" id="9dT-IB-V6c"/>
+                        <outlet property="asphaltPlusButton" destination="bYE-mA-4Qr" id="vDe-z9-5JG"/>
+                        <outlet property="redPlusButton" destination="Ucp-DO-anS" id="9rr-H6-GH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="-195" y="1061"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Transition-->
         <scene sceneID="bAM-p5-ETh">
             <objects>
                 <viewController id="QcM-DK-2aA" customClass="SecondViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +125,7 @@
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="zdG-tc-BLP">
+                    <navigationItem key="navigationItem" title="Transition" id="zdG-tc-BLP">
                         <barButtonItem key="leftBarButtonItem" image="close" id="Mef-r2-1ns">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -120,4 +144,7 @@
         <image name="close" width="15" height="15"/>
         <image name="plus" width="15" height="15"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="0hd-1i-Mom"/>
+    </inferredMetricsTieBreakers>
 </document>

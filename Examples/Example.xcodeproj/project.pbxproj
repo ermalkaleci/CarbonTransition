@@ -13,7 +13,7 @@
 		8E83BF301C36D9D400971741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E83BF271C36D9D400971741 /* Main.storyboard */; };
 		8E83BF321C36D9D400971741 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83BF2A1C36D9D400971741 /* FirstViewController.swift */; };
 		8E83BF341C36D9D400971741 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83BF2C1C36D9D400971741 /* SecondViewController.swift */; };
-		8E83BF371C36DC2800971741 /* CarbonMaterialTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83BF361C36DC2800971741 /* CarbonMaterialTransaction.swift */; };
+		8EE6ABF51C394237003FD9D8 /* CarbonMaterialTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6ABF41C394237003FD9D8 /* CarbonMaterialTransaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		8E83BF2A1C36D9D400971741 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		8E83BF2B1C36D9D400971741 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E83BF2C1C36D9D400971741 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		8E83BF361C36DC2800971741 /* CarbonMaterialTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonMaterialTransaction.swift; sourceTree = "<group>"; };
+		8EE6ABF41C394237003FD9D8 /* CarbonMaterialTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarbonMaterialTransaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 		8E83BF001C3493E600971741 = {
 			isa = PBXGroup;
 			children = (
-				8E83BF351C36DC2800971741 /* Sources */,
+				8EE6ABF31C394237003FD9D8 /* Sources */,
 				8E83BF221C36D9D400971741 /* Example */,
 				8E83BF0A1C3493E600971741 /* Products */,
 			);
@@ -70,13 +70,14 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		8E83BF351C36DC2800971741 /* Sources */ = {
+		8EE6ABF31C394237003FD9D8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8E83BF361C36DC2800971741 /* CarbonMaterialTransaction.swift */,
+				8EE6ABF41C394237003FD9D8 /* CarbonMaterialTransaction.swift */,
 			);
-			path = Sources;
-			sourceTree = SOURCE_ROOT;
+			name = Sources;
+			path = ../Sources;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -149,7 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E83BF371C36DC2800971741 /* CarbonMaterialTransaction.swift in Sources */,
+				8EE6ABF51C394237003FD9D8 /* CarbonMaterialTransaction.swift in Sources */,
 				8E83BF341C36D9D400971741 /* SecondViewController.swift in Sources */,
 				8E83BF321C36D9D400971741 /* FirstViewController.swift in Sources */,
 				8E83BF2D1C36D9D400971741 /* AppDelegate.swift in Sources */,

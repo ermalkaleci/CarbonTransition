@@ -10,10 +10,14 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var color: UIColor?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.barTintColor = color
+        view.backgroundColor = color
     }
 
     override func didReceiveMemoryWarning() {
